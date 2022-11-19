@@ -13,8 +13,6 @@ class Product {
   save() {
     const db = getDb();
     let dbOp;
-    console.log('17',this)
-    console.log('18')
     if(this._id){
       dbOp=db.collection('products')
       .updateOne({_id: this._id},{$set:this})
